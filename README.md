@@ -1,4 +1,4 @@
-# COVID-19 Web Predictor
+# COVID-19 Web Data Predictor
 
 ## Background
 
