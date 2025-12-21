@@ -12,9 +12,13 @@ This project is meant to create a new approach to predicting COVID-19 cases whil
 
 This project uses hospital data from the [New York City OpenData portal](https://data.cityofnewyork.us). The hospital data contains daily counts of `cases`, `hospitalizations` and `deaths` from 2020 to 2025 and is an aggregate of hospitals in the New Yor City Metropolitan area. The data includes a breakdown across all 5 boroughs and also provides a daily average for each of the 3 features.The data is served through [data.gov](https://data.gov) which is a government portal for open data. 
 
+At the time of download, the hospital data contained **2054 entries**.
+
 **Identify the number of records and the different fields**
 
 Also, it uses web trend data from [Google Trends](https://trends.google.com/trends/). The data exported from Google Trends was exported annually from 2020 to 2025. Google trends automatically aggregates the exported data in weekly intervals that represent the average popularity of the term over the course of that week. The data has been filtered to New York City to match the area of the hospital data. The popularity is returned as a string value that ranges from 0 to 100. However, there are times when it returns a value that is non-numeric, like `"< 1"`.
+
+In the Northwell project, analytics data on their website was used to represent the web data. This included activity on Physician landing pages and COVID-19 information pages. For this project, the broad term of COVID-19 was used in the google trends.
 
 **Identify the number of records and the different fields**
 
@@ -25,6 +29,7 @@ For uniformity, the popularity rating, found in the trend data, was converted to
 The data was split into training and test data sets. The numeric popularity rating was normalized along with the weekly averages for the number of cases, hospitalizations and deaths.
 
 The data is used to train multiple models. The results are evaluated by comparing different accuracy scores - F1, Precision, Recall, and general Accuracy.
+
 
 ## Risks/Concerns
 
@@ -38,3 +43,5 @@ Care must be taken if adapting this method for working with other disease outbre
 [^1]: Northwell Healths (2025, December 15) Covid Web Data Predictor, GitHub, https://github.com/northwell-health/covid-web-data-predictor
 
 [^2]: Google News Initiative (2025, December 18) Basics of Google Trends, Google, https://newsinitiative.withgoogle.com/resources/trainings/basics-of-google-trends/
+
+[^3]: Springer Nature Link, https://link.springer.com/article/10.1007/s41666-020-00083-3
