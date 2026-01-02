@@ -28,7 +28,7 @@ For uniformity, the popularity rating, found in the trend data, was converted to
 
 The data was split into training and test data sets. The numeric popularity rating was normalized along with the weekly averages for the number of cases, hospitalizations and deaths.
 
-The data is used to train multiple models. The results are evaluated by comparing different accuracy scores - F1, Precision, Recall, and general Accuracy.
+The data is used to train multiple models. The results are evaluated comapring the **RMSE (Root Mean Square Error)**. The RMSE is the average error, or distance, between the regression line created by the predictions and the actual data. The model with the smallest error represents the model with the best prediction.
 
 
 ## Risks/Concerns
