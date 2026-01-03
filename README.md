@@ -21,3 +21,13 @@ This project will differ from the original COVID project by the following:
 1. The analysis will test different models, linear as well as non-linear, to determine which better predicts the rise and fall of confirmed infections. 
 2. The analysis will incorporate different methods of analysis such as USING **SHAP** analaysis to determine what are the main features that determine the outcome from the model. Further, rather than making use of accuracy which is a good measure of classification, this will make use of **RMSE (Root Mean Square Error)**. RMSE is a good measure of how closely the model's prediction matches the regression line from training or test data. Consequently, this analysis will treat the problem as a regression problem rather than a classification problem.
 3. As stated before, the project will make use of data which is open and readily available.
+
+## Recommended Reading Order
+This needed not be followed religiously, but if you feel bewildered as to how to begin, I recommend this order for making sense of the material.
+
+1. /documents/project.md
+2. /exploratory-data-analysis/eda-covid-hospital-data.ipynb
+3. /explorartor-data-analysis/eda-web-search-data.ipynb
+4. /dataset-preparation.ipynb
+5. /model-evaluation.ipynb
+6. /model-analysis.ipynb
