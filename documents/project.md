@@ -10,17 +10,13 @@ This project is meant to create a new approach to predicting COVID-19 cases whil
 
 ## Data Set Description
 
-This project uses hospital data from the [New York City OpenData portal](https://data.cityofnewyork.us). The hospital data contains daily counts of `cases`, `hospitalizations` and `deaths` from 2020 to 2025 and is an aggregate of hospitals in the New Yor City Metropolitan area. The data includes a breakdown across all 5 boroughs and also provides a daily average for each of the 3 features.The data is served through [data.gov](https://data.gov) which is a government portal for open data. 
+This project uses hospital data from the [New York City OpenData portal](https://data.cityofnewyork.us). The hospital data contains daily counts of `cases`, `hospitalizations` and `deaths` from 2020 to 2025 and is an aggregate of hospitals in the New Yor City Metropolitan area. The data includes a breakdown across all 5 boroughs and also provides a daily average for each of the 3 features.The data is served through [data.gov](https://data.gov) which is a government portal for open data. The features of the hospital data include the following `date_of_interest, CASE_COUNT,    PROBABLE_CASE_COUNT, HOSPITALIZED_COUNT, DEATH_COUNT,CASE_COUNT_7DAY_AVG, ALL_CASE_COUNT_7DAY_AVG, HOSP_COUNT_7DAY_AVG, and DEATH_COUNT_7DAY_AVG.`
 
-At the time of download, the hospital data contained **2054 entries**.
+Also, it uses web trend data from [Google Trends](https://trends.google.com/trends/). The data exported from Google Trends was exported annually from 2020 to 2025. Google trends automatically aggregates the exported data in weekly intervals that represent the average popularity of the term over the course of that week. The data has been filtered to New York City to match the area of the hospital data. The popularity is returned as a string value that ranges from 0 to 100. However, there are times when it returns a value that is non-numeric, like `"< 1"`. The features of the web data include the following `Week, and COVID-19: (New York NY)` where **COVID-19: (New York)** is the poularity rating.
 
-**Identify the number of records and the different fields**
+In the Northwell project, analytics data from their website was used to represent the web data. This included activity on Physician landing pages and COVID-19 information pages. For this project, the broad term of **COVID-19** was used in the Google trends search to generate the web data.
 
-Also, it uses web trend data from [Google Trends](https://trends.google.com/trends/). The data exported from Google Trends was exported annually from 2020 to 2025. Google trends automatically aggregates the exported data in weekly intervals that represent the average popularity of the term over the course of that week. The data has been filtered to New York City to match the area of the hospital data. The popularity is returned as a string value that ranges from 0 to 100. However, there are times when it returns a value that is non-numeric, like `"< 1"`.
-
-In the Northwell project, analytics data on their website was used to represent the web data. This included activity on Physician landing pages and COVID-19 information pages. For this project, the broad term of COVID-19 was used in the google trends.
-
-**Identify the number of records and the different fields**
+At the time of download, the hospital data contained **2054 entries** of data related to hospitalizations and deaths acrosss all 5 boroughgs of New York City. On the other hand, the web data contains a total of **265 entries**.  Mering the two datasets will result in some data loss. However, since the Google data is an average, weekly, normalized amount of the populartiy of the search term, the data was matched to the equivalent avaerage weekly cases of COVID for cases, hospitalizations and deaths.
 
 ## Methods
 
@@ -43,5 +39,3 @@ Care must be taken if adapting this method for working with other disease outbre
 [^1]: Northwell Healths (2025, December 15) Covid Web Data Predictor, GitHub, https://github.com/northwell-health/covid-web-data-predictor
 
 [^2]: Google News Initiative (2025, December 18) Basics of Google Trends, Google, https://newsinitiative.withgoogle.com/resources/trainings/basics-of-google-trends/
-
-[^3]: Springer Nature Link, https://link.springer.com/article/10.1007/s41666-020-00083-3
