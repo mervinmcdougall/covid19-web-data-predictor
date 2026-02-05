@@ -1,0 +1,9 @@
+# Consideartions about the project
+
+In 2020, Northwell Health created a project called COVID Web Data Predictor that utilized a combiation of hospital COVID admissions and web activity on select pages about COVID on their website to predict the rise and fall of COVID hospital admissions. On the surface this seems like a good idea however, there are some important considerations about the data used. 
+
+First, although the COVID admission counts was not supplied in the susbsequent public release of the project, it does not indicate who the reporting hospitals were. If the hospitals only apply to Northwell hospitals, there may be an inherent bias in the data. In short, the data may only indicate that people who have a Northwell hospital in their area and who have insurance for that Northwell hospital, may be more inclined to review Northwell COVID websites and subsequently check-in. 
+
+Further, it does not discuss about communities that have a historical stigma with using the health system or individuals who may aovid the health system altogether who are in the country illegally and want to avoid identification and susbequent deportation.
+
+For this project data was sourced from the NYC local Government and the google search trend data for NYC. However, the annual data for search trends is delivered weekly rather than the daily format that was provided in the hospital data. Further, the weekly data is an average for that week. Therefore, to perform an equal comparison the daily average field for the daily data will be used to combine the data. Because of this limitation there will be 53 entries per year. The smaller dataset will make using neural networks for training unnecessary and simpler data science models will be used.
